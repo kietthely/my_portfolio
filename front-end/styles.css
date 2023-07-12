@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(129, 89, 137);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    
+}
+.navigation-bar{
+
+}
+.introduction-hook{
+
+}
+.logo-left {
+    margin-right: auto;
+}
+.navigation-menu {
+    list-style: none;
+    display: flex;
+}
+.navigation-menu > .nav-items > a {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.navigation-menu > .nav-items {
+    text-decoration: none;
+}
+.navigation-menu > .nav-items:hover{
+    background-color: lightgreen;
+    transition-delay: 0.05s;
+}
