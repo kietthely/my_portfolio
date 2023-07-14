@@ -2,32 +2,36 @@ body {
     background-color: rgb(129, 89, 137);
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
+header{
+    padding: 2% 15%;
     
 }
-.navigation-bar{
-
+nav > a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    padding: 0px 15px;
+    text-align: center;
+    font-size: 15px;
+    
 }
-.introduction-hook{
-
+nav {
+    float: right;
+}
+nav a.active{
+    background-color: green;
+}
+nav a:hover{
+    transition-delay: 0.1s;
+    color: yellow;
+}
+hr{
+    border-style: dotted none none;
+    margin: 50px auto 50px auto;
+    border-width: 5px;
+    width: 5%;
+    border-color: #3282b8;
 }
 .logo-left {
     margin-right: auto;
 }
-.navigation-menu {
-    list-style: none;
-    display: flex;
-}
-.navigation-menu > .nav-items > a {
-    text-decoration: none;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-.navigation-menu > .nav-items {
-    text-decoration: none;
-}
-.navigation-menu > .nav-items:hover{
-    background-color: lightgreen;
-    transition-delay: 0.05s;
-}
+
