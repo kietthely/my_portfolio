@@ -79,7 +79,7 @@ hr{
 .intro p.fade-in{
     animation: drop-letters 1.7s ease-in-out forwards;
 }
-@keyframes drop-letters{
+@keyframes fade-letters{
     0%{
         opacity: 0;
     }
