@@ -21,7 +21,7 @@ function LEDLettersAnimation(){
             const letterElements = paragraph.querySelectorAll('.letter');
             letterElements.forEach(function(letter, index) {
             // Add drop-letters animation for each letter to simulate dropping letters
-              letter.style.animation = `drop-letters 1.7s infinite ease-in-out forwards ${index * 0.1}s`;
+              letter.style.animation = `fade-letters 1.7s infinite ease-in-out forwards ${index * 0.1}s`;
             });
             paragraph.classList.add('fade-in'); // Add the fade-in class
           }
