@@ -62,12 +62,11 @@ hr{
     background: linear-gradient(transparent, black);
 }
 .fade-in-text {
-    opacity: 0; 
-    transition: opacity 2s; 
+    opacity: 0;
   }
   
 .fade-in-text.fade-in {
-    opacity: 1; 
+    animation: drop-letters;
   }
   
 .intro {
@@ -78,17 +77,16 @@ hr{
     opacity: 0;
 }
 .intro p.fade-in{
-    animation: drop-letters 0.5s ease-in-out forwards;
+    animation: drop-letters 1.7s ease-in-out forwards;
 }
 @keyframes drop-letters{
     0%{
         opacity: 0;
-        transform: translateY(-20px);
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
     }
+    
 }
 .portfolio{
     width: 100%;
