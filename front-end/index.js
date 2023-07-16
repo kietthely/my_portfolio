@@ -2,16 +2,17 @@
 window.addEventListener('scroll', function() {
     fadeInAnimation();
 });
+
+// Detect load event
 window.addEventListener('load', function(){LEDLettersAnimation();});
 function LEDLettersAnimation(){
     const introElements = this.document.querySelectorAll('.intro');
 
     introElements.forEach(function(element){
-        // Retrieve the viewport coordinates i.e (0,700)
-        const elementTop = element.getBoundingClientRect().top;
-        const elementBottom = element.getBoundingClientRect().bottom;
-        // If in the viewport then perform animation
-        if (elementTop < window.innerHeight && elementBottom > 0) {
+        // Retrieve the viewport coordinates
+        const currentView = element.getBoundingClientRect();
+          // If in the viewport then perform animation
+        if (currentView.top < window.innerHeight && currentView.bottom > 0) {
             const paragraph = element.querySelector('p');
             //Split the texts into letters
             const letters = paragraph.textContent.split('').map(letter => `<span class="letter">${letter}</span>`).join('');
@@ -33,11 +34,10 @@ function fadeInAnimation(){
 
     // Loop through each fade-in element
     fadeInElements.forEach(function(element) {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-
+    const currentView = element.getBoundingClientRect();
+    
     // Check if the element is within the viewport
-    if (elementTop < window.innerHeight && elementBottom > 0) {
+    if (currentView.top < window.innerHeight && currentView.bottom > 0) {
         element.classList.add('fade-in'); // Add the fade-in class
     } else {
         element.classList.remove('fade-in'); // Remove the fade-in class
