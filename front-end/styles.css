@@ -3,34 +3,86 @@
 body {
   font-family: 'Exo', sans-serif;
   margin: 0;
-background-color: black;
-color: white;
+background-color: white;
+color: black;
 }
 .logo{
     cursor: pointer;
+    font-family: cursive;
+    font-size: 1.3rem;
+}
+
+.cloud-top-left{
+    position: absolute;
+    left: 14%;
+    top: 5%;
+}
+.cloud-top-right{
+    position: absolute;
+    right: 15%;
+    top: 7%;    
+}
+.cloud-bottom-left{
+    position: absolute;
+    left: 7%;
+    bottom: 3%;
+}
+.cloud-bottom-right{
+    position: absolute;
+    right: 8%;
+    bottom: 4%;
 }
 header{
+    background-color: #e1ebe8;
     display: flex;
-    background-color: rgb(58, 1, 58);
     justify-content: space-between;
     align-items: center;
     padding: 2% 15%;
 }
-
-nav > a {
+.active{
+    color: rgb(192, 37, 37);
+}
+nav a {
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
     padding: 0px 15px;
     text-align: center;
     font-size: 15px;
-    color: purple;
+    color: black;
 }
+.underline-link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.underline-link::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -2px;
+width: 0;
+height: 2px;
+background-color: #000;
+transition: width 0.3s ease;
+}
+
+.underline-link:hover::after {
+width: 100%;
+}
+
+
 nav {
     float: right;
 }
+
 nav a:hover{
     transition-delay: 0.1s;
-    color: rgb(31, 27, 165);
+    color: rgb(192, 37, 37);
+}
+
+nav a:hover::after{
+    width: 100%;
 }
 hr{
     border-style: dotted none none;
@@ -44,13 +96,13 @@ hr{
 }
 .top-content{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, rgb(58, 1, 58), black);
+    height: 650px;
+    background-color: #e1ebe8;
     margin: 0;
     position: relative;
     overflow: hidden;
     padding-top: 20px;
-
+  
 }
 .top-content::before{
     content: '';
@@ -59,7 +111,7 @@ hr{
     width: 100%;
     height: 75px;
     z-index: 1000;
-    background: linear-gradient(transparent, black);
+    background: linear-gradient(transparent, #fff);
 }
 .fade-in-text {
     opacity: 0;
@@ -88,19 +140,15 @@ hr{
     }
     
 }
-.portfolio{
+section{
     width: 100%;
-    height: 300px;
-    text-align:  center;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 20%;
 }
 .icon {
     width: 30px;
     height: auto;
     position: relative;
-}
-.about{
-    width: 100%;
-    height: 100px;
-    text-align: center;
 }
 

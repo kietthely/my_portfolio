@@ -1,3 +1,16 @@
+// Underline of a link slowly grows
+function underlineGrow(){
+    const underline = document.querySelectorAll(".underline-grow");
+    underline.array.forEach(element => {
+        element.addEventListener("mouseover", () => {
+            element.style.setProperty("--underline-width", "150%");
+            element.addEventListener("mouseout", () => {
+                element.style.setProperty("--underline-width", "100%");
+              });
+        });
+
+    });
+}
 // Detect scroll event
 window.addEventListener('scroll', function() {
     fadeInAnimation();
@@ -44,3 +57,5 @@ function fadeInAnimation(){
     }
     });
   }
+  
+  // Image movements when scrolling down
