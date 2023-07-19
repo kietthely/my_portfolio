@@ -1,7 +1,8 @@
-
+cloudImagesMovement();
 // Detect scroll event
 window.addEventListener('scroll', function() {
     fadeInAnimation();
+    
 });
 
 // Detect load event
@@ -54,8 +55,10 @@ function fadeInAnimation(){
     var topLeftCloudMovement = document.getElementsByClassName('cloud-top-left');
     scroll = window.pageYOffset;
     document.addEventListener('scroll', function(element){
+        scroll = offset
         var offset = window.pageYOffset;
-        topLeftCloudMovement.style.left = (2 + scroll/30) + '%';
-        topLeftCloudMovement.style.bottom = (3 + scroll/15) + '%';
+        topLeftCloudMovement.style.left = (40 + scroll/30) + '%';
+
     });
+  
   }
