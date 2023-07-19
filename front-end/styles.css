@@ -12,25 +12,25 @@ color: black;
     font-size: 1.3rem;
 }
 
-.cloud-top-left{
+#cloud-top-left{
     position: absolute;
     left: 14%;
     top: 5%;
 }
-.cloud-top-right{
+#cloud-top-right{
     position: absolute;
     right: 15%;
     top: 7%;    
 }
-.cloud-bottom-left{
+#cloud-bottom-left{
     position: absolute;
-    left: 7%;
-    bottom: 3%;
+    left: 4%;
+    bottom: 40%;
 }
-.cloud-bottom-right{
+#cloud-bottom-right{
     position: absolute;
     right: 8%;
-    bottom: 4%;
+    bottom: 60%;
 }
 header{
     background-image: linear-gradient(to right, rgb(230, 249, 248), #b5f0df);
