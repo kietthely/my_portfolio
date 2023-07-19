@@ -52,13 +52,15 @@ function fadeInAnimation(){
   
   // Image movements when scrolling down
   function cloudImagesMovement(){
-    var topLeftCloudMovement = document.getElementsByClassName('cloud-top-left');
+    var topLeftCloudMovement = document.getElementById('cloud-top-left');
+    var bottomLeftCloudMovement = document.getElementById('cloud-bottom-left');
     scroll = window.pageYOffset;
     document.addEventListener('scroll', function(element){
-        scroll = offset
-        var offset = window.pageYOffset;
-        topLeftCloudMovement.style.left = (40 + scroll/30) + '%';
-
+        scroll = window.pageYOffset;
+        topLeftCloudMovement.style.top = (6 + scroll/10) + '%';
     });
-  
+    document.addEventListener('scroll', function(element){
+        scroll = window.pageYOffset;
+        bottomLeftCloudMovement.style.top = (45 + scroll/10) + '%';
+    });
   }
