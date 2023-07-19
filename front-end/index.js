@@ -50,3 +50,12 @@ function fadeInAnimation(){
   }
   
   // Image movements when scrolling down
+  function cloudImagesMovement(){
+    var topLeftCloudMovement = document.getElementsByClassName('cloud-top-left');
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function(element){
+        var offset = window.pageYOffset;
+        topLeftCloudMovement.style.left = (2 + scroll/30) + '%';
+        topLeftCloudMovement.style.bottom = (3 + scroll/15) + '%';
+    });
+  }
