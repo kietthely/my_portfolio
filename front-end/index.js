@@ -1,16 +1,4 @@
-// Underline of a link slowly grows
-function underlineGrow(){
-    const underline = document.querySelectorAll(".nav-item");
-    underline.array.forEach(element => {
-        element.addEventListener("mouseover", () => {
-            element.style.setProperty("--underline-width", "150%");
-            element.addEventListener("mouseout", () => {
-                element.style.setProperty("--underline-width", "100%");
-              });
-        });
 
-    });
-}
 // Detect scroll event
 window.addEventListener('scroll', function() {
     fadeInAnimation();
@@ -18,6 +6,8 @@ window.addEventListener('scroll', function() {
 
 // Detect load event
 window.addEventListener('load', function(){LEDLettersAnimation();});
+
+// LEDLettersAnimation
 function LEDLettersAnimation(){
     const introElements = this.document.querySelectorAll('.intro');
 
@@ -41,6 +31,7 @@ function LEDLettersAnimation(){
           }
     });
   }
+// Fade-in animation
 function fadeInAnimation(){
     // Make texts slowly appear
     const fadeInElements = document.querySelectorAll('.fade-in-text');
