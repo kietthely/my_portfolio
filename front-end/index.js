@@ -1,6 +1,6 @@
 // Underline of a link slowly grows
 function underlineGrow(){
-    const underline = document.querySelectorAll(".underline-grow");
+    const underline = document.querySelectorAll(".nav-item");
     underline.array.forEach(element => {
         element.addEventListener("mouseover", () => {
             element.style.setProperty("--underline-width", "150%");
