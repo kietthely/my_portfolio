@@ -61,6 +61,6 @@ function fadeInAnimation(){
     });
     document.addEventListener('scroll', function(element){
         scroll = window.pageYOffset;
-        bottomLeftCloudMovement.style.top = (53 + scroll/10) + '%';
+        bottomLeftCloudMovement.style.top = (45 + scroll/10) + '%';
     });
   }
