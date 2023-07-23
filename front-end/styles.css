@@ -8,13 +8,11 @@ body {
     height: 100%;
     overflow:auto;
 }
-
 .logo{
     cursor: pointer;
     font-family: cursive;
     font-size: 1.3rem;
 }
-
 #cloud-top-left{
     position: absolute;
     left: 14%;
@@ -35,7 +33,6 @@ body {
     right: 8%;
     bottom: 60%;
 }
-
 header{
     background-image: linear-gradient(to right, rgb(162, 206, 245), #96d2ff);
     display: flex;
@@ -59,7 +56,6 @@ nav a {
     position: relative;
     text-decoration: none;
 }
-  
 .nav-item::after {
     content: "";
     position: absolute;
@@ -70,22 +66,17 @@ nav a {
     background-color: rgb(192, 37, 37);
     transition: width 0.3s ease;
 }
-
 .nav-item:hover::after {
     width: 100%;
 }
-
-
 nav {
     float: right;
 }
-
 nav a:hover{
     text-decoration: none;
     transition-delay: 0.1s;
     color: rgb(192, 37, 37);
 }
-
 nav a:hover::after{
     width: 100%;
 }
@@ -103,8 +94,6 @@ nav a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
 }
 .top-content::before{
     content: '';
@@ -115,17 +104,11 @@ nav a:hover::after{
     z-index: 1000;
     background: linear-gradient(transparent, #fff);
 }
-
 .rocket{
-    
-
-    animation: launching 5s linear infinite alternate;
-
+    animation: launching 10s linear infinite alternate;
 }
-
 @keyframes launching{
     0%{
-        
         transform: translate(-85px, -68px);
     }
     25%{
@@ -142,9 +125,6 @@ nav a:hover::after{
     }
     
 }
-
-
-
 .fade-in-text {
     opacity: 0;
   }
@@ -152,7 +132,6 @@ nav a:hover::after{
 .fade-in-text.fade-in {
     animation: fade-letters 1.5s forwards;
 }
-
 .intro {
     justify-content: space-between;
     text-align: center;
@@ -171,11 +150,7 @@ nav a:hover::after{
     100%{
         opacity: 1;
     }
-    
 }
-
-
-
 section{
     width: 100%;
     height: 100%;
@@ -186,5 +161,21 @@ section{
     width: 30px;
     height: auto;
     position: relative;
+    
 }
-
+.btn {
+    box-shadow: inset 0 0 20px rgb(162, 206, 245);
+    outline: 1px solid;
+    outline-color: rgb(162, 206, 245);
+    background-image: linear-gradient(to right, rgb(162, 206, 245), #96d2ff);
+    text-shadow: none;
+    transition: all 1.5s cubic-bezier(0.05, 0.7, 0.03, 0.9);
+    border-radius: 20px;
+  } 
+  .btn:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 10px rgb(162, 206, 245), 0 0 20px rgb(162, 206, 245);
+    outline-color: rgb(162, 206, 245);
+    outline-offset: 10px;
+    text-shadow: 5px 5px 10px #427388; 
+  }
