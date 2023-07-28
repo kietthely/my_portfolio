@@ -2,3 +2,5 @@
 .project
 .settings/
 projects/.metadata/*
+projects/MusicPlaylist/bin/*
+
