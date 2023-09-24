@@ -1,77 +1,44 @@
-cloudImagesMovement();
-// Detect scroll event
-window.addEventListener('scroll', function() {
-    fadeInAnimation();
-    
+/*Menu Icon for smaller resolution */
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
+
+/*Scroll down events*/
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+  sections.forEach( sec=> {
+    let top = window.scrollY;
+    let offset = sec.offsetTop -150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+    if(top >= offset && top < offset + height){
+      navLinks.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      });
+    };
+  });
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 100, );
+  /*remove menu bar when an item is being clicked */
+  menuIcon.classList.remove('bx-x');
+  navbar.classList.remove('active');
+};
+
+ScrollReveal({
+  reset: true,
+  distance: '80px',
+  duration: 2000,
+  delay: 200
+
 });
 
-// Detect load event
-window.addEventListener('load', function(){LEDLettersAnimation();});
-
-// LEDLettersAnimation
-function LEDLettersAnimation(){
-    const introElements = this.document.querySelectorAll('.intro');
-
-    introElements.forEach(function(element){
-        // Retrieve the viewport coordinates
-        const currentView = element.getBoundingClientRect();
-          // If in the viewport then perform animation
-        if (currentView.top < window.innerHeight && currentView.bottom > 0) {
-            const paragraph = element.querySelector('p');
-            //Split the texts into letters
-            const letters = paragraph.textContent.split('').map(letter => `<span class="letter">${letter}</span>`).join('');
-            // Make span element for each letter
-            paragraph.innerHTML = letters;
-      
-            const letterElements = paragraph.querySelectorAll('.letter');
-            letterElements.forEach(function(letter, index) {
-            // Add drop-letters animation for each letter to simulate dropping letters
-              letter.style.animation = `fade-letters 1.7s infinite ease-in-out forwards ${index * 0.1}s`;
-            });
-            paragraph.classList.add('fade-in'); // Add the fade-in class
-          }
-    });
-  }
-// Fade-in animation
-function fadeInAnimation(){
-    // Make texts slowly appear
-    const fadeInElements = document.querySelectorAll('.fade-in-text');
-
-    // Loop through each fade-in element
-    fadeInElements.forEach(function(element) {
-    const currentView = element.getBoundingClientRect();
-    
-    // Check if the element is within the viewport
-    if (currentView.top < window.innerHeight && currentView.bottom > 0) {
-        element.classList.add('fade-in'); // Add the fade-in class
-    } else {
-        element.classList.remove('fade-in'); // Remove the fade-in class
-    }
-    });
-  }
-  
-  // Image movements when scrolling down
-  function cloudImagesMovement(){
-    var topLeftCloudMovement = document.getElementById('cloud-top-left');
-    var bottomLeftCloudMovement = document.getElementById('cloud-bottom-left');
-    var topRightCloudMovement = document.getElementById('cloud-top-right');
-    var bottomRightCloudMovement = document.getElementById('cloud-bottom-right');
-
-    scroll = window.pageYOffset;
-    document.addEventListener('scroll', function(element){
-        scroll = window.pageYOffset;
-        topLeftCloudMovement.style.top = (6 + scroll/10) + '%';
-    });
-    document.addEventListener('scroll', function(element){
-        scroll = window.pageYOffset;
-        bottomLeftCloudMovement.style.top = (53 + scroll/10) + '%';
-    });
-    document.addEventListener('scroll', function(element){
-      scroll = window.pageYOffset;
-      topRightCloudMovement.style.top = (7 + scroll/10) + '%';
-  });
-    document.addEventListener('scroll', function(element){
-      scroll = window.pageYOffset;
-      bottomRightCloudMovement.style.top = (33 + scroll/10) + '%';
-  });
-  }
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.portfolio-box', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
