@@ -2,61 +2,79 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Triomeria Connect</title>
+        <title>Sam Portfolio</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
-
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
         
-            <header>
-            
+            <header class="header">
                 <h1 class="logo">Sammie</h1>
-                <nav>
-                    <a class="active" href="index.html">Home</a>
-                    <a class="nav-item" href="portfolio.html">Portfolio</a>
-                    <a class="nav-item" href="about.html">About</a>
+
+                <i class='bx bx-menu' id="menu-icon"></i>
+
+                <nav class="navbar">
+                    <a class="active" href="#home">Home</a>
+                    <a class="nav-item" href="#portfolio">Portfolio</a>
+                    <a class="nav-item" href="#about">About</a>
                 </nav>
             </header>
-                
-            <div class="top-content">
-                <img id="cloud-top-left" src="img/cloud.png" alt="Cloud on the top left">
-                <img id="cloud-top-right" src="img/cloud.png" alt="Cloud on the top right">
-                <img id="cloud-bottom-right" src="img/cloud.png" alt="Cloud on the bottom right">    
-                <img id="cloud-bottom-left" src="img/cloud.png" alt="Cloud on the bottom left">
-         
-                
-                <div class="intro">
-                    <p>Hey, I'm Sam!</p>
-        
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, I'm Sam</h3>
+                <h1>Sam Ly</h1>
+                <h3>I'm a <span>Software Developer</span></h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam 
+                    corrupti fuga at expedita quasi hic est ab a dolore, vero perferendis corporis maiores quib
+                    usdam autem sed laborum numquam debitis sapiente.</p>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
                 </div>
                 
-                <img class="icon rocket" src="img/rocket.png">
-
+            <a href="#" class="btn">Download my CV</a>
             </div>
-        
-        <section class="portfolio" >
-            <h2 class="fade-in-text">My Projects</h2>
-            <h3>They cover</h3>
-            <div>
-                <img class="icon" src="img/python-5-logo-svg-vector.svg" alt="Python logo">
-                <img class="icon" src="img/database.svg" alt="Database icon">
-                <img class="icon" src="img/html.png" alt="HTML icon">
-                <img class="icon" src="img/CSS3_logo.svg.png" alt="CSS logo">
-                <img class="icon" src="img/javascript-svg logo.svg" alt="Javascript logo">
-            
+            <div class="home-img">
+                <img src="#" alt="">
             </div>
-            
-            <a class="btn" href="portfolio.html">My Projects</a>
         </section>
-   
-        <section class="about-me">
-            <p>About me</p>
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">
+                Latest <span>Projects</span>
+            </h2>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="img/trade-stock.png" alt="Trade Stock Java Application">
+                    <div class="portfolio-layer">
+                        <h4>Java Application</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis culpa fuga quae eveniet impedit, corrupti necessitatibus voluptate deleniti vitae dolorum esse fugit repellendus dolores, atque sapiente totam doloribus molestiae facilis!</p>
+                        <a href=""><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="img/Data-Analytics-Benefits.png" alt="Amazon ASP.NET Application">
+                    <div class="portfolio-layer">
+                        <h4>ASP.NET Application</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis culpa fuga quae eveniet impedit, corrupti necessitatibus voluptate deleniti vitae dolorum esse fugit repellendus dolores, atque sapiente totam doloribus molestiae facilis!</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
         </section>
-     
-        
-        
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">
+                    About <span>Me</span>
+                </h2>
+                <p>Lorem ipsum dolor sit am
+                    et consectetur adipisicing elit. Inventore rerum ipsum sus
+                    cipit sed eum eligendi delectus. Architecto quia nesciunt doloremque
+                     aliquam minima. Dolores modi debitis minus ipsum aliquid praesentium. Officia!</p>
+            </div>
+        </section>
     </body>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
