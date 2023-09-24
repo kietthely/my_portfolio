@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author lythe
- *
- */
-module LibraryManagement {
-}
